@@ -7,7 +7,9 @@ public class OrdenamientosCuadraticos {
 	private static final int INSERTION_SORT = 3;
 
     private static <T> void intercambio(T[] arreglo, int i, int j) {
-        /*Aqui va tu codigo*/
+        T aux = arreglo[i]; 
+        arreglo[i] = arreglo[j];
+        arreglo[j] = aux;
     }
 
     private static <T extends Comparable<T>> int encontrarIndiceMenor(T[] arreglo, int i, int j){

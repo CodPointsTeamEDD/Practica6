@@ -14,14 +14,26 @@ public class OrdenamientosCuadraticos {
 
     private static <T extends Comparable<T>> int encontrarIndiceMenor(T[] arreglo, int i, int j){
         /*Aqui va tu codigo*/
+        return 2;
     }  
 
     public static <T extends Comparable<T>> void selectionSort(T[] arreglo, boolean imprimir) {     
         /*Aqui va tu codigo*/
     }
 
-    public static <T extends Comparable<T>> void bubbleSort(T[] arreglo,boolean imprimir) {
-        /*Aqui va tu codigo*/
+    public static <T extends Comparable<T>> void bubbleSort(T[] arreglo, boolean imprimir) {
+        // Verificando si el arreglo tiene 0 o 1 elemento
+        if (arreglo.length == 0 || arreglo.length == 1) {
+            return;   
+        }
+        
+        for (int i=0; i < arreglo.length; i++) {
+            for (int j = 1; j < arreglo.length-1; j++) {
+                if(arreglo[j].compareTo(arreglo[j+1]) == 1){
+                    intercambio(arreglo, j, j+1);
+                }   
+            }
+        }
     }
 
     public static <T extends Comparable<T>> void insertionSort(T[] arreglo, boolean imprimir) {

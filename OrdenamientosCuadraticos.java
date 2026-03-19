@@ -13,8 +13,16 @@ public class OrdenamientosCuadraticos {
     }
 
     private static <T extends Comparable<T>> int encontrarIndiceMenor(T[] arreglo, int i, int j){
-        /*Aqui va tu codigo*/
-        return 2;
+        int indiceMenor =  i;
+
+        for (int k = i; k <= j; k++) { 
+            if(arreglo[k].compareTo(arreglo[indiceMenor]) < 0){
+                indiceMenor = k;
+            }
+        }
+
+        return indiceMenor;
+
     }  
 
     public static <T extends Comparable<T>> void selectionSort(T[] arreglo, boolean imprimir) {     

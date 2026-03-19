@@ -18,7 +18,11 @@ public class OrdenamientosCuadraticos {
     }  
 
     public static <T extends Comparable<T>> void selectionSort(T[] arreglo, boolean imprimir) {     
-        /*Aqui va tu codigo*/
+        int minimo;
+        for (int i = 0; i < arreglo.length; i++) {
+            minimo = encontrarIndiceMenor(arreglo, i, arreglo.length-1);
+            intercambio(arreglo, i, minimo);
+        }   
     }
 
     public static <T extends Comparable<T>> void bubbleSort(T[] arreglo, boolean imprimir) {

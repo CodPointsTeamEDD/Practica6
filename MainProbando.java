@@ -16,5 +16,13 @@ public class MainProbando{
             System.out.print(num + ", ");
         }
         System.out.println("");
+
+        Integer[] arreglo3 = {1, 9, 4, 6, 2};
+
+        OrdenamientosCuadraticos.insertionSort(arreglo3, false);
+        for (Object num : arreglo3) {
+            System.out.print(num + ", ");
+        }
+        System.out.println("");
     }
 }

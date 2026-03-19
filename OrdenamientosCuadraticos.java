@@ -41,7 +41,17 @@ public class OrdenamientosCuadraticos {
     }
 
     public static <T extends Comparable<T>> void insertionSort(T[] arreglo, boolean imprimir) {
-        /*Aqui va tu codigo*/
+        for (int i = 1; i < arreglo.length; i++) {
+            T aInsertar = arreglo[i];
+            int j = i - 1;
+
+            while (j >= 0 && arreglo[j].compareTo(aInsertar) == 1) {
+                arreglo[j + 1] = arreglo[j];
+                j = j - 1;
+            }
+
+            arreglo[j + 1] = aInsertar;
+        }
     }
 
     public static <T extends Comparable<T>> void ordenar(int algoritmo, T[] arreglo, boolean imprimir) {

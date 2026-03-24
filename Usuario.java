@@ -30,9 +30,13 @@ public class Usuario implements Comparable<Usuario>{
     @Override
     public int compareTo(Usuario u){
         if (this.nivelNum != u.nivelNum) {
-            return this.nivelNum - u.nivelNum;        
+            return u.nivelNum - this.nivelNum ;        
         } 
 
-        return u.numLlegada - this.numLlegada;
+        return this.numLlegada - u.numLlegada;
+    }
+
+    public String toString(){
+        return nombre + "_" + nivel + "_" + numLlegada + "\n";
     }
 }

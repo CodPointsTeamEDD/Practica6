@@ -11,7 +11,11 @@ public class MainFilaVirtual{
         int maxBoletos;
         System.out.println("Cuantos boletos hay disponibles antes de iniciar la venta?");
 
+        System.out.print(">");
+
         maxBoletos = sc.nextInt();
+
+        System.out.println(" ");
 
         int tamanioArreglo = 0;
 
@@ -46,9 +50,16 @@ public class MainFilaVirtual{
             System.out.println("Error al leer el archivo");
         }
 
-        // for(int i = 0; i<usuarios.length; i++){
-        //     System.out.println(usuarios[i].nombre + " Nivel: " + usuarios[i].nivel + " Llegada: " + usuarios[i].numLlegada);
-        // }
-        OrdenamientosCuadraticos.ordenar(1, usuarios, true);
+        for (Usuario u : usuarios) {
+            System.out.print("Alcanzó boleto: ");
+            if (maxBoletos > 0) {
+                System.out.print("Sí");                
+            } else {
+                System.out.print("No");                
+            }
+            System.out.println("");
+            System.out.println(u.toString());
+            maxBoletos--;
+        }
     }
 }

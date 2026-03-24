@@ -22,6 +22,11 @@ public class OrdenamientosCuadraticos {
         for (int i = 0; i < arreglo.length; i++) {
             minimo = encontrarIndiceMenor(arreglo, i, arreglo.length-1);
             intercambio(arreglo, i, minimo);
+        }
+        if(imprimir){
+            for (int i = 0; i < arreglo.length; i++) {
+                System.out.println(arreglo[i].toString());
+            }
         }   
     }
 
@@ -38,6 +43,11 @@ public class OrdenamientosCuadraticos {
                 }   
             }
         }
+        if(imprimir){
+            for (int i = 0; i < arreglo.length; i++) {
+                System.out.println(arreglo[i].toString());
+            }
+        }   
     }
 
     public static <T extends Comparable<T>> void insertionSort(T[] arreglo, boolean imprimir) {
@@ -52,6 +62,11 @@ public class OrdenamientosCuadraticos {
 
             arreglo[j + 1] = aInsertar;
         }
+        if(imprimir){
+            for (int i = 0; i < arreglo.length; i++) {
+                System.out.println(arreglo[i].toString());
+            }
+        }   
     }
 
     public static <T extends Comparable<T>> void ordenar(int algoritmo, T[] arreglo, boolean imprimir) {

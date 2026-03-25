@@ -81,8 +81,8 @@ public class OrdenamientosCuadraticos {
         }
         
         for (int i=0; i < arreglo.length; i++) {
-            for (int j = 1; j < arreglo.length-1; j++) {
-                if(arreglo[j].compareTo(arreglo[j+1]) == 1){
+            for (int j = 0; j < arreglo.length-1; j++) {
+                if(arreglo[j].compareTo(arreglo[j+1]) >= 1){
                     intercambio(arreglo, j, j+1);
                 }   
             }

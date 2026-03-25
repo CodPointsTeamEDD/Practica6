@@ -22,7 +22,12 @@ public class MainFilaVirtual{
         int maxBoletos;
         int tamanioArreglo = 0;
 
-        System.out.println("Cuantos boletos hay disponibles antes de iniciar la venta?");
+        System.out.println("----------------------------------");
+        System.out.println("   BIENVENIDO A LA FILA VIRTUAL   ");
+        System.out.println("----------------------------------");
+        System.out.println("");
+        System.out.println("¿Cuantos boletos hay disponibles antes de iniciar la venta?");
+        System.out.println("Ingresa cualquiera cifra");
         System.out.print(">");
 
         /* Obteniendo número maximo de boletos */
@@ -62,16 +67,23 @@ public class MainFilaVirtual{
             System.out.println("Error al leer el archivo");
         }
 
+        OrdenamientosCuadraticos.ordenar(2, usuarios, false);
+
+        System.out.println("Usuarios ordenados por prioridad:");
+        System.out.println(" ");
+
         /* Mostrando información sobre usuarios en pantalla */
         for (Usuario u : usuarios) {
+            
+            System.out.println(u.toString());
             System.out.print("Alcanzó boleto: ");
             if (maxBoletos > 0) {
                 System.out.print("Sí");                
             } else {
                 System.out.print("No");                
             }
-            System.out.println("");
-            System.out.println(u.toString());
+            System.out.println(" ");
+            System.out.println(" ");
             maxBoletos--;
         }
     }

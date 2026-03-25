@@ -58,6 +58,6 @@ public class Usuario implements Comparable<Usuario>{
      * Método que muestra en pantalla la informaición de un usuario
     */
     public String toString(){
-        return nombre + "_" + nivel + "_" + numLlegada + "\n";
+        return "Nombre: " + nombre + "\n" + "Nivel: " + nivel + "\n" + "Número de llegada: " + numLlegada;
     }
 }
